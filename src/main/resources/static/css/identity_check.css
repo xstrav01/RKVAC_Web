@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit]#yes {
+  background-color: #2bce32;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float:right;
+}
+
+input[type=submit]#no {
+  background-color: #ea3535;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float:left;
+}
+input[type=submit]#no:hover {
+  background-color: #ff3700;
+}
+
+
+input[type=submit]#yes:hover {
+  background-color: #07ff11;
+}
+
+
+
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#ia {
+text-align: center;
+border: 1px solid black;
+margin-top: 40px;
+padding: 15px;
+}
+
+#curr{
+background-color: darkgrey;
+}
+
+#form {
+text-align: center;
+
+}
+
+.green {
+padding: 15px;
+background: white;
+margin: 200px 0 10px 0;
+color: #4caf50;
+border: 1px solid black;
+text-align: center;
+}
+
+.fail {
+padding: 15px;
+background: white;
+margin: 200px 0 10px 0;
+color: red;
+border: 1px solid black;
+text-align: center;
+}
+
+.fail-err {
+padding: 15px;
+background: white;
+margin: 0px 0 200px 0;
+color: black;
+border: 1px solid black;
+text-align: center;
+}
+
+article#hlavní-sloupec {
+float: left;
+width: 40%;
+
+text-align: center;
+}
+article#hlavní-sloupec .dark-white {
+min-height: 331px;
+}
+
+
+
+
+@media screen and (max-width: 918px) {
+
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+  }
+
+  input[type=submit]{
+  margin-top: 10px;
+  }
+
+
+
+  article#hlavní-sloupec .dark-white {
+  min-height: 0px;
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+#plan .box,
+  aside#sidebar,
+  article#hlavní-sloupec {
+    float: none;
+    text-align: center;
+    width:100%;
+  }
+}

@@ -1,0 +1,392 @@
+/* CSS Document */
+
+
+/* globálnì */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin:0;
+  padding:0;
+  background-color:#f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin:auto;
+  overflow:hidden;
+}  
+ul {
+margin:0;
+padding:0;
+}
+
+.dark {
+padding: 15px;
+background: #00af53;
+margin: 10px 0 10px 0;
+color: white;
+border: 1px solid black;
+}
+.dark-white{
+padding: 15px;
+border: 1px solid black;
+margin: 10px 0 10px 0;
+color: black;
+text-align: center;
+
+}
+
+.dark-form {
+padding: 15px;
+background: #696969;
+margin: 10px 0 545px 0;
+color: white;
+border: 1px solid black;
+}
+
+.dark-done {
+padding: 15px;
+background: #f9f9f9;
+margin: 200px 0 10px 0;
+color: #45a049;
+border: 1px solid black;
+text-align: center;
+}
+
+.dark-access {
+padding: 15px;
+background: #4bb750;
+margin: 200px 0 10px 0;
+color: white;
+border: 1px solid black;
+text-align: center;
+font-size: 50px;
+}
+
+.dark-denied {
+padding: 15px;
+background: red;
+margin: 200px 0 10px 0;
+color: white;
+border: 1px solid black;
+text-align: center;
+font-size: 50px;
+}
+
+
+
+
+/* hlavièka */
+header {
+position: sticky;
+top: 0;
+background:#00af53;
+color: white;
+padding-top: 0px;
+min-height: 70px;
+border-bottom:#000000 3px solid;
+border-top:#000000 3px solid;
+}
+
+header a{
+color: #ffffff;
+text-transform: uppercase;
+text-decoration: none;
+font-size: 17px;
+}
+
+
+header li{
+float: left;
+display: inline;
+padding-right: 20px;
+padding-left: 20px;
+}
+
+header #branding {
+float: left;
+margin: 0;
+
+}
+header nav {
+float: right;
+margin-top:30px;
+
+}
+
+
+header .highlight, header .current a, header #issuer a {
+color: black;
+font-weight: bold;
+}
+
+header a:hover {
+color: #000000;
+font-weight: bold;
+}
+
+/* showcase */
+#showcase {
+min-height: 500px;
+background: url(../img/showcase.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+color: white;
+text-align: center;
+width: 100%;
+
+
+}
+
+#showcase h1{
+margin-top: 100px;
+font-size: 55px;
+margin-bottom: 10px;
+
+}
+
+/* bloky */
+#boxes {
+margin-top: 35px;
+
+}
+#boxes .box {
+float: left;
+width: 30%;
+padding: 10px;
+text-align: center;
+}
+
+#boxes img {
+width: 250px;
+height: 200px;
+}
+
+#plan .box {
+float: left;
+width: 33%;
+padding: 10px;
+text-align: center;
+margin-bottom: 13px;
+}
+
+#plan .box:hover {
+background-color: darkgrey;
+}
+
+#plan img {
+width: 250px;
+height: 200px;
+}
+
+#plan a {
+color: black;
+}
+
+
+
+/* hlavní(about) */
+
+
+
+aside#sidebar {
+float: right;
+width: 58%;
+padding-top: 0;
+text-align:center;
+
+
+}
+#plan {
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+}
+
+#plan h2 {
+text-align: center;
+border-top: 1px solid black;
+border-bottom: 1px solid black;
+margin-top: 40px;
+padding: 15px;
+}
+
+article#hlavní-sloupec img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* tabulka (služby)*/
+table#služby {
+border-collapse: collapse;
+margin: 15px auto 15px auto;
+width: 100%;
+
+}
+table#služby tr, td {
+border-bottom: 1px solid #ddd;
+height: 50px;
+}
+table#služby tr#orange{
+background:#00af53;
+color: white;
+}
+table#služby tr:nth-child(even) {
+background-color: rgb(204,204,204);
+}
+
+table#služby td {
+padding: 0 10px 0 10px;
+text-align: center;
+}
+table#služby tr:hover {
+border-left: 3px solid #e8491d;
+border-right: 3px solid #e8491d;
+}
+table#služby tr#orange:hover {
+border-left: 0px solid #00af53;
+border-right: 0px solid #00af53;
+}
+
+
+
+
+
+
+
+
+#done {
+min-height: 850px;
+background: url(../img/code.jpg);
+background-repeat: repeat;
+background-position: center center;
+width: 100%;
+text-align: center;
+
+}
+
+
+}
+#done h2 {
+text-align: center;
+vertical-align: text-bottom;
+
+}
+
+
+
+
+
+
+/* spodek */
+
+footer {
+background:#00af53;
+color: white;
+text-align: center;
+padding: 10px;
+border-bottom:#000000 3px solid;
+border-top:#000000 3px solid;
+
+}
+
+/* dropdown */
+
+
+.dropdown .dropbtn {
+
+  color: white;
+  padding: 20px 20px;
+
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-transform: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* škálování */
+@media(max-width: 918px){
+header #branding,
+header nav,
+header nav li,
+#boxes .box,
+article#služby
+ {
+float: none;
+text-align: center;
+width:100%;
+}
+header nav li {
+padding: 7px;
+}
+.dropdown:hover .dropdown-content {
+float: none;
+text-align: center;
+width: 80%;
+}
+
+.dark-form {
+margin: 0 auto;
+}
+
+#form h2 {
+font-size: 20px;
+}
+
+.dropdown .dropbtn {
+  padding: 10px ;
+}
+
+header {
+padding-bottom: 20px;
+}
+
+#showcase h1{
+margin-top 40px;
+font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+

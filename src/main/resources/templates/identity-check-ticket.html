@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/css.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/identity_check.css}" type="text/css">
+    <title>RKVAC | Identity check</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name='description' content='Authentication app'>
+    <meta name='keywords' content='rkvac, smart-card authentication'>
+    <meta name='author' content='Bronislav Strava'>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='img/favicon.png' rel='shortcut icon' type='image/png'>
+    <script language="Javascript">
+
+    function No()
+    {
+    document.Form1.action = "Page1.aspx"
+    document.Form1.target = "_blank";    // Open in a new window
+    document.Form1.submit();             // Submit the page
+    return true;
+    }
+
+
+
+    </script>
+
+</head>
+<body>
+
+<header> <!-- Hlavička -->
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">RKVAC</span> Authentication</h1>
+        </div>
+        <nav>
+            <ul>
+                <li  ><a href="index">Home</a></li>
+                <li class="dropdown" ><a href="#" class="dropbtn">Issuer</a>
+                    <div class="dropdown-content">
+                        <a href="personalization">Personalization</a>
+                        <a href="issue-attributes">Issue Attributes</a>
+                    </div>
+                </li>
+                <li><a href="RA">RA</a></li>
+                <li><a href="Verifier">Verifier</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section id="done">
+    <div class="container">
+        <h2 class="dark-done" th:utext="@{'Verify cardholder '+${line}+' identity'}"></h2>
+
+        <form action="issuing-attributes-ticket-ver">
+
+                    <input type="hidden" id="names" name="names" th:value="${names}">
+
+                    <input type="hidden" id="cnumber" name="cnumber" th:value="${cnumber}">
+
+                    <input type="hidden" id="ticket" name="ticket" th:value="${ticket}">
+
+                    <input type="hidden" id="database" name="database" th:value="${database}">
+
+                    <input id="yes" type="submit" value="Yes">
+        </form>
+        <form  method="get" action="/issue-attributes">
+            <input id="no" type="submit" value="No">
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy;RKVAC VUT 2020</p>
+
+</footer>
+</body>
+</html>

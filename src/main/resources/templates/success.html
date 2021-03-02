@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" th:content="|1.5; url=${url}|" />
+    <link rel="stylesheet" th:href="@{/css/css.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/attributes.css}" type="text/css">
+    <title>RKVAC | Success</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name='description' content='Authentication app'>
+    <meta name='keywords' content='rkvac, smart-card authentication'>
+    <meta name='author' content='Bronislav Strava'>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='img/favicon.png' rel='shortcut icon' type='image/png'>
+
+</head>
+<body>
+
+<header> <!-- Hlavička -->
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">RKVAC</span> Authentication</h1>
+        </div>
+        <nav>
+            <ul>
+                <li  ><a href="index">Home</a></li>
+                <li class="dropdown" ><a href="#" class="dropbtn">Issuer</a>
+                    <div class="dropdown-content">
+                        <a href="personalization">Personalization</a>
+                        <a href="issue-attributes">Issue Attributes</a>
+                    </div>
+                </li>
+                <li><a href="RA">RA</a></li>
+                <li><a href="Verifier">Verifier</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section id="done">
+    <div class="container">
+        <h2 class="dark-done">SUCCESS</h2>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy;RKVAC VUT 2020</p>
+
+</footer>
+</body>
+</html>

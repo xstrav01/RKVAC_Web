@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/css.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/RA.css}" type="text/css">
+    <title>RKVAC | RA</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name='description' content='Authentication app'>
+    <meta name='keywords' content='rkvac, smart-card authentication'>
+    <meta name='author' content='Bronislav Strava'>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='img/favicon.png' rel='shortcut icon' type='image/png'>
+
+</head>
+<body>
+
+<header> <!-- Hlavička -->
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">RKVAC</span> Authentication</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index">Home</a></li>
+                <li class="dropdown" ><a href="#" class="dropbtn">Issuer</a>
+                    <div class="dropdown-content">
+                        <a href="personalization">Personalization</a>
+                        <a href="issue-attributes">Issue Attributes</a>
+                    </div>
+                </li>
+                <li class="current"><a href="RA">RA</a></li>
+                <li><a href="Verifier">Verifier</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+    <div class="container">
+        <h2 id="ia">Revocation Authority</h2>
+        <article id="hlavní">
+
+            <div class="dark-white">
+                <h4 >Revocation handler list:</h4>
+                <tbody id="data">
+                <tr th:each="line : ${list}">
+                    <td ><p2  th:utext="${line}"></p2></td>
+                </tr>
+                </tbody>
+            </div>
+
+
+
+
+
+
+        <form action="RA-handlers" id="form">
+            <div class="row">
+                <div class="col-25">
+                </div>
+                <div class="col-75">
+                    <input type="submit" id="submit" value="Issue revocation handlers">
+                </div>
+            </div>
+
+        </form>
+        </article>
+
+
+
+
+    </div>
+
+
+<footer>
+    <p>&copy;RKVAC VUT 2020</p>
+
+</footer>
+</body>
+</html>

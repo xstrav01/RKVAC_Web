@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/css.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/attributes.css}" type="text/css">
+    <title>RKVAC | Issue Attributes</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name='description' content='Authentication app'>
+    <meta name='keywords' content='rkvac, smart-card authentication'>
+    <meta name='author' content='Bronislav Strava'>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='img/favicon.png' rel='shortcut icon' type='image/png'>
+
+</head>
+<body>
+
+<header> <!-- Hlavička -->
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">RKVAC</span> Authentication</h1>
+        </div>
+        <nav>
+            <ul>
+                <li  ><a href="index">Home</a></li>
+                <li class="dropdown" id="issuer"><a href="#" class="dropbtn">Issuer</a>
+                    <div class="dropdown-content">
+                        <a href="personalization">Personalization</a>
+                        <a href="issue-attributes">Issue Attributes</a>
+                    </div>
+                </li>
+                <li><a href="RA">RA</a></li>
+                <li><a href="Verifier">Verifier</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div class="container">
+
+    <section id="plan">
+        <h2 >Issue Attributes</h2>
+            <div class="container">
+
+            <a href="issue-attributes">
+            <div class="box" id="curr">
+                <img src="./img/insert_card.jpg">
+                <h3>Employee card</h3>
+
+            </div>
+            </a>
+
+            <a href="issue-attributes-ticket">
+            <div class="box">
+                <img src="img/ticket.jpg">
+                <h3>Ticket</h3>
+
+            </div>
+            </a>
+
+            <a href="issue-attributes-eid">
+            <div class="box">
+            <img src="./img/eid.jpg">
+            <h3>EID</h3>
+
+
+            </div>
+            </a>
+
+            </div>
+    </section>
+    <article id="hlavní-sloupec">
+        <div class="dark-white">
+            <h3 >User database list:</h3>
+            <tbody>
+            <tr th:each="line : ${list}">
+                <td ><p2  th:utext="${line}"></p2></td>
+            </tr>
+            </tbody>
+        </div>
+
+    </article>
+    <aside id="sidebar">
+        <form class="dark-form" id="form" action="issuing-attributes">
+            <div class="row">
+                <div class="col-25">
+                    <label for="names">Name and surname*</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="names" name="names" placeholder="Enter your name and surname...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="employer">Employer</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="employer" name="employer" placeholder="Enter your employer...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="employee_id">Employee id</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="employee_id" name="employee_id" placeholder="Enter your id...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="employee_position">Employee positiion</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="employee_position" name="employee_position" placeholder="Enter your position...">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </aside>
+</div>
+
+
+<footer>
+    <p>&copy;RKVAC VUT 2020</p>
+
+</footer>
+</body>
+</html>
